@@ -2,24 +2,144 @@
 <html>
 
 <head>
-	<title>
-		HTML text formatting
-	</title>
+  <title>
+    HTML text formatting
+  </title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 15px;
+      background-color: lightgray;
+    }
+  </style>
 </head>
 
+<!-- Ejemplo text formating -->
+
 <body>
-	<h2>Welcome To GeeksforGeeks</h2>
+  <h1 style="text-align: center;">¿Perros? ¡Perros!</h1>
+  <div style="display: flex; justify-content: flex-end; background-image: url(https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705795200&semt=ais);">
+    <table>
+      <tr>
+        <th>Autores</th>
+      </tr>
+      <tr>
+        <td> Manuel Alberto Apolonio Cuevas </td>
+      </tr>
+      <tr>
+        <td> Alejandro Jesus Sansores Arjona </td>
+      </tr>
+    </table>
+  </div>
+  <p style="text-align: justify; font-size: 20px; padding: 10px;">Los perros, conocidos científicamente como <b>Canis
+      lupus familiaris</b>, son una subespecie de mamíferos carnívoros de la familia Canidae. Son uno de los primeros
+    animales que los humanos domesticaron, y se les conoce comúnmente como el “<mark>mejor amigo del hombre</mark>”
+    debido a su larga historia de compañía con nosotros.
+    <br><br>
+    Además de ser mascotas populares, los perros también desempeñan una serie de roles importantes en la sociedad
+    humana. Algunos perros son entrenados para ayudar a las <ins>personas con discapacidades</ins>, como los perros guía
+    para personas ciegas y los perros de servicio para personas con discapacidades físicas. Otros perros trabajan en la
+    <i>búsqueda y rescate</i>, la <i>detección de drogas y explosivos</i>, y en diversas formas de <i>terapia y apoyo
+      emocional</i>.
+    <br><br>
+    Los perros son conocidos por su lealtad y su capacidad para formar fuertes lazos emocionales con los humanos. En
+    resumen, los perros son <mark>compañeros increíbles</mark> que pueden traer mucha <ins>alegría</ins> y
+    <ins>amor</ins> a nuestras vidas. 🐶
+  </p>
 
-	<!--Text in Strong-->
-	<strong>Hello Geeks</strong>
-	<br>
+  <small style="display:flex; justify-content: center;">Baile de apareamiento perruno</small>
 
-	<!--Text in small-->
-	<small>Hello Geeks</small>
-	<br>
+  <!-- Epico ejemplo de Video insertado en la pagina -->
+  <div class="container"
+    style="display: flex; justify-content: center; background-image: url(https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705795200&semt=ais);">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kdKwpWS7UFA" frameborder=" 0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
 
-	<!--Text in Highlight-->
-	<mark>Hello Geeks</mark>
-</body>
+  <!-- Ejemplo de lista -->
+  <div class="container" style="font-size: 20px;">
+    <ul style="text-align: justify;">
+      <strong>5 cosas que no sabías de los perros</strong>
+      <li>Los perros fueron domesticados hace 16,000 años </li>
+      <li>Tienen la mayor diversidad racial (343 razas) </li>
+      <li>Crean sociedades democráticas </li>
+      <li>Pueden detectar enfermedades </li>
+      <li>Tienen cerca de 100 expresiones faciales </li>
+      <!--Ejemplo de link-->
+      <strong>¿Quieres saber más? <ins>click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank">aquí</a></ins></strong>
+    </ul>
+  </div>
+
+  <div class="container"
+    style="text-align: center; background-image: url(https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705795200&semt=ais);" >
+    <h2 style=" display: flex; justify-content: center;">¿Qué razas de perros existen</h2>
+    <img src="https://www.clarin.com/img/2020/06/08/-e68f6HnY_360x240__1.jpg" alt="perros cools"
+      style="justify-content: center;">
+    <!--  Ejemplo de Tabla -->
+    <div style="display: flex; justify-content: center; padding-bottom: 20px ;">
+      <table style="text-align: center;">
+        <tr>
+          <th style="font-weight: bolder;">Raza de perro</th>
+          <th style="font-weight: bold;">Tamaño</th>
+          <th style="font-weight: bold;">Esperanza de vida</th>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Labrador Retriever</td>
+          <td>Grande</td>
+          <td>10-12 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Bulldog Francés</td>
+          <td>Mediano</td>
+          <td>10-12 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Chihuahua</td>
+          <td>Pequeño</td>
+          <td>14-16 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Pastor Alemán</td>
+          <td>Grande</td>
+          <td>8-10 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Bóxer</td>
+          <td>Grande</td>
+          <td>8-10 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Golden Retriever</td>
+          <td>Grande</td>
+          <td>8-10 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Mastín</td>
+          <td>Gigante</td>
+          <td>6-11 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Terranova</td>
+          <td>Gigante</td>
+          <td>6-11 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Gran Danés</td>
+          <td>Gigante</td>
+          <td>6-11 años</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Dálmata</td>
+          <td>Mediano</td>
+          <td>10-13 años</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
 </html>
