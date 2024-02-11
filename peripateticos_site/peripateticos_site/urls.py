@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # add path to call hello_geeks function
-    path('geek/', views.hello_geeks, name = 'geek')
+    path('', views.hello_geeks, name = 'geek')
 ]
