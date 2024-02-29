@@ -22,8 +22,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # add path to call hello_geeks function
-    path('autores', views.hello_geeks, name = 'autores'),
-    path('',include('projectApp.urls'))
+    path('',include('opgg.urls')),
 ]

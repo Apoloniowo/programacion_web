@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Video Autoplay Example</title>
+        <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
+    </head>
+    <body>
+        <!--
+            GET - Visualizar
+            POST - Cambiar d atos/Enviar peticion
+
+            CSFR_TOKEN - Cross Site Foreign Restriction
+        
+        -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+    
+    </body>
+    
+
+
+</html>
