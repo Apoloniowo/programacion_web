@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView,ListView,CreateView
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, DeleteView
 from opgg.models import Autores
 
 """"
@@ -38,7 +38,15 @@ class ListaAutores(ListView):
     model = Autores
 
     def get_queryset(self):
-        return Autores.objects.filter(bandera=True)
+        return Autores.objects.filter(visualizacion=True)
+    
+class ListaTodoAutores(ListView):
+    template_name = 'todosautores.html'
+    model = Autores
+
+    def get_queryset(self):
+        return Autores.objects.all
+        
 
 class CrearAutorView(CreateView):
     template_name = 'crear-autor.html'
@@ -51,3 +59,10 @@ class ActualizarAutorView(UpdateView):
     model = Autores
     fields = ('__all__')
     success_url = '/lista'
+
+class EliminarAutorView(DeleteView):
+    template_name = 'eliminar-autor.html'
+    model =  Autores
+    fields =('__all__')
+    success_url = '/lista'
+

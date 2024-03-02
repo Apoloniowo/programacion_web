@@ -24,7 +24,7 @@ from django.db import models
 class Autores(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    bandera = models.BooleanField(default=False)
+    visualizacion = models.BooleanField(default=False)
     
     def __str__(self):
         return f'{self.pk} - {self.nombre} {self.apellido}'

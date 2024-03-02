@@ -1,0 +1,75 @@
+body {
+    background-color: #c5d2e3;
+    /* Fondo gris */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d2f5f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buton {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    top: 2px;
+}
+
+.buton:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background-color: #9acbd0;
+    /* Fondo gris */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    padding: 10px;
+    /* Espaciado interno */
+    width: fit-content;
+    /* Ajustar el tamaño del card*/
+}
+
+.botonsito {
+    background-color: #4c8eaf;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Django</title>
+    <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%;padding: 20px;">
+        <h1>Autores de la
+            aplicación</h1>
+        <h3>Salón de la fama
+            para todos los autores que han colaborado en esta aplicación. Ordenados de mayor impacto a menor impacto.
+        </h3>
+        <table class="card">
+            {% for obj in object_list %}
+            <tr>
+                <td>{{obj.id}}</td>
+                <td>{{obj.nombre}}</td>
+                <td>{{obj.apellido}}</td>
+                <!--<td>{{obj.visualizacion}}</td>-->
+                <td><a href="/modificar/{{obj.id}}/">Modificar</a></td>
+                <td><a href="/eliminar/{{obj.id}}/">Eliminar</a></td>
+            </tr>
+            {% endfor%}
+        </table>
+        <a href="/lista" class="botonsito">Regresar</a>
+    </div>
+
+</body>
+
+</html>

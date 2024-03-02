@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Video Autoplay Example</title>
-        <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
-    </head>
-    <body>
-        <!--
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Autoplay Example</title>
+    <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;">Agregue o modifique el nombre y apellido del autor.</h1>
+    </div>
+    <!--
             GET - Visualizar
             POST - Cambiar d atos/Enviar peticion
 
             CSFR_TOKEN - Cross Site Foreign Restriction
         
         -->
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Enviar</button>
-        </form>
-    
-    </body>
-    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>Haga click en "visualizacion" si desea que el nombre se visualice.</p>
+
+        <div style="text-align:center;">
+            <a class="buton" href="/lista">Regresar</a>
+            <button type="submit" style="width: max-content;height: 38px;">Enviar</button>
+        </div>
+    </form>
+
+</body>
+
 
 
 </html>

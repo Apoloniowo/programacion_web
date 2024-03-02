@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Autoplay Example</title>
+    <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1 style="text-align: center;">¿Seguro que quieres eliminar este autor? <br></h1>
+        <h2>"{{ object }}"</h2>
+    </div>
+    <div style="text-align: center;">
+        <form method="post">{% csrf_token %}
+            {{ form }}
+            <a class="buton" href="/lista">Cancelar</a>
+            <input style="width: max-content;height: 38px; top: 0px;" class="buton" type="submit" value="Confirmar">
+        </form>
+    </div>
+</body>
+
+</html>
