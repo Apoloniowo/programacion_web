@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Django</title>
+    <link rel="stylesheet" href="{% static 'opgg/styles.css' %}">
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%;padding: 20px;">
+
+        <div style="display: flex; justify-content: center;">
+
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen></iframe>
+        </div>
+
+        <a href="/lista" class="botonsito">Regresar</a>
+        
+    </div>
+
+</body>
+
+</html>

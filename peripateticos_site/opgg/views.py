@@ -47,7 +47,6 @@ class ListaTodoAutores(ListView):
     def get_queryset(self):
         return Autores.objects.all
         
-
 class CrearAutorView(CreateView):
     template_name = 'crear-autor.html'
     model = Autores
@@ -65,4 +64,6 @@ class EliminarAutorView(DeleteView):
     model =  Autores
     fields =('__all__')
     success_url = '/lista'
+
+
 
