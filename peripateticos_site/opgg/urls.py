@@ -11,6 +11,7 @@ urlpatterns = [
     path('crear',views.CrearAutorView.as_view()),
     path('modificar/<int:pk>/',views.ActualizarAutorView.as_view()),
     path('todosautores',views.ListaTodoAutores.as_view()),
-    path('eliminar/<int:pk>/',views.EliminarAutorView.as_view())
-
+    path('eliminar/<int:pk>/',views.EliminarAutorView.as_view()),
+    path('error',views.ErrorView.as_view())
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

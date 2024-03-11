@@ -65,5 +65,15 @@ class EliminarAutorView(DeleteView):
     fields =('__all__')
     success_url = '/lista'
 
+class ErrorView(TemplateView):
+    template_name = 'error.html'
+
+    def get(self,request,*args,**kwargs):
+        context = self.get_context_data()
+        return render(request,self.template_name,context)
+
+    def post(self,request,*args,**kwargs):
+        context = self.get_context_data()
+        return render(request,self.template_name,context)
 
 
