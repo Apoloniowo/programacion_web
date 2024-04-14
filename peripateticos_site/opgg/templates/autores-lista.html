@@ -21,7 +21,7 @@
     <div style="display:inline-flex; justify-content: space-around; width: 95vw;">
         <div class="card" style="text-align: center; padding: 1rem; margin: 1rem;">
             <h3>Autores principales de esta página</h3>
-            <a style="margin-top:0px;" class="botonsito" href="/crear">Agregar nuevo autor</a>
+            <a style="margin-top:0px;" class="botonsito" href="{% url 'crear' %}">Agregar nuevo autor</a>
             <table>
                 {% for obj in object_list %}
                 <tr>
@@ -29,13 +29,17 @@
                     <td>{{obj.nombre}}</td>
                     <td>{{obj.apellido}}</td>
                     <!--<td>{{obj.visualizacion}}</td>-->
-                    <td><a href="/modificar/{{obj.id}}/">Modificar</a></td>
-                    <td><a href="/eliminar/{{obj.id}}/">Eliminar</a></td>
+                    <td><a href="{% url 'modificar' pk=obj.id %}">Modificar</a></td>
+                    <td><a href="{% url 'eliminar' pk=obj.id %}">Eliminar</a></td>
                 </tr>
                 {% endfor%}
             </table>
-            <h3>¿Quieres ver todos los demás autores? <br><a class="botonsito" href="/todosautores">¡Haz click aquí!</a>
+            <h3>¿Quieres ver todos los demás autores? <br><a class="botonsito" href="{% url 'lista_autores' %}">¡Haz click aquí!</a>
             </h3>
+            <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Cerrar Sesion</button>
+            </form>
         </div>
 
         <div class="card" style="padding: 1rem; margin: 1rem; display: flex; flex-direction: column; align-items: center;">
@@ -45,7 +49,7 @@
 
                 <a href="https://www.youtube.com/embed/qUEM5m2fv-s" style="width: 50%;"><button style="background-color: greenyellow;width: 98%;height: -webkit-fill-available;"></button></a>
                 
-                <a href="/error" style="width: 50%;"><button style="background-color: red;width: 98%;height: -webkit-fill-available;"></button></a>
+                <a href="{% url 'error' %}" style="width: 50%;"><button style="background-color: red;width: 98%;height: -webkit-fill-available;"></button></a>
             
             </div>
         </div>

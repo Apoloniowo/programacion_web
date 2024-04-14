@@ -6,11 +6,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('',views.HomeView.as_view()),
-    path('lista',views.ListaAutores.as_view()),
-    path('crear',views.CrearAutorView.as_view()),
-    path('modificar/<int:pk>/',views.ActualizarAutorView.as_view()),
-    path('todosautores',views.ListaTodoAutores.as_view()),
-    path('eliminar/<int:pk>/',views.EliminarAutorView.as_view()),
-    path('error',views.ErrorView.as_view())
+    path('lista/',views.ListaAutores.as_view(),name='lista'),
+    path('crear/',views.CrearAutorView.as_view(),name='crear'),
+    path('modificar/<int:pk>/',views.ActualizarAutorView.as_view(),name='modificar'),
+    path('autores/',views.ListaTodoAutores.as_view(),name='lista_autores'),
+    path('eliminar/<int:pk>/',views.EliminarAutorView.as_view(),name='eliminar'),
+    path('error',views.ErrorView.as_view(),name='error')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
