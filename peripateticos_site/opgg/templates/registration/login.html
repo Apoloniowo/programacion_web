@@ -1,7 +1,29 @@
 <!-- templates/registration/login.html -->
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Log In</button>
-</form>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pa logear mi camarada</title>
+  <link rel="stylesheet" href="{% static 'opgg/stylelogin.css' %}">
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Inserta el usuario illo</h2>
+    <form>
+      <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Dale pa'lante máquina</button>
+      </form>
+  </div>
+  </div>
+  <div class="qrcode">
+      <img style="width: 90%; height: 90%;" src="{% static 'opgg/uwu.png' %}" alt="xd">
+  </div>
+</body>
+
+</html>
