@@ -127,10 +127,14 @@ STATIC_ROOT = os.join( BASE_DIR,"static")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+PASSWORD_CHANGE_DONE = '/login/'
+
 LOGIN_URL = '/login/'
 
 LOGIN_REDIRECT_URL = '/web/lista/'
 
 LOGOUT_REDIRECT_URL = '/login/'
+
+
 
 

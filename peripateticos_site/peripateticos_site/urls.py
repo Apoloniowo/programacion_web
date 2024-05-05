@@ -22,6 +22,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('web/',include('opgg.urls')),
+    path('web/',include('opgg.urls')),  
     path('',include('django.contrib.auth.urls')),
+    path('register/',views.register,name='register')
 ]
