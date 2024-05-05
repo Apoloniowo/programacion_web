@@ -22,7 +22,6 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.email = request.POST['email']  # Add email field
             user.save()
             login(request, user)
             return redirect('login/')
