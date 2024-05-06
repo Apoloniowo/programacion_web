@@ -34,31 +34,44 @@
                 </tr>
                 {% endfor%}
             </table>
-            <h3>¿Quieres ver todos los demás autores? <br><a class="botonsito" href="{% url 'lista_autores' %}">¡Haz click aquí!</a>
+            <h3>¿Quieres ver todos los demás autores? <br><a class="botonsito" href="{% url 'lista_autores' %}">¡Haz
+                    click aquí!</a>
             </h3>
+
+
             <form action="{% url 'logout' %}" method="POST">
                 {% csrf_token %}
                 <button type="submit">Cerrar Sesion</button>
             </form>
-            <form action="{% url 'password_change' %}" method="POST">
-                {% csrf_token %}
-                <button type="submit">reset password</button>
-              </form>
-              <form action="{% url 'password_reset' %}" method="POST">
-                {% csrf_token %}
-                <button type="submit">reset password</button>
-              </form>
-        </div>
+            <div style="display: inline-flex;width: -webkit-fill-available; margin: 1px;">
+                <form action="{% url 'password_change' %}" method="POST"
+                    style="width: -webkit-fill-available;margin: 1px;">
+                    {% csrf_token %}
+                    <button type="submit">Cambiar contraseña</button>
+                </form>
 
-        <div class="card" style="padding: 1rem; margin: 1rem; display: flex; flex-direction: column; align-items: center;">
+                <form action="{% url 'password_reset' %}" method="POST"
+                    style="width: -webkit-fill-available;margin: 1px;">
+                    {% csrf_token %}
+                    <button type="submit">Eliminar contraseña</button>
+                </form>
+            </div>
+        </div>
+ 
+        
+
+        <div class="card"
+            style="padding: 1rem; margin: 1rem; display: flex; flex-direction: column; align-items: center;">
             <h2 style="margin-bottom: 1rem;">Haga clic en el botón verde.</h2>
-            
+
             <div style="display: flex; justify-content: space-between; width: 100%;height: -webkit-fill-available">
 
-                <a href="https://www.youtube.com/embed/qUEM5m2fv-s" style="width: 50%;"><button style="background-color: greenyellow;width: 98%;height: -webkit-fill-available;"></button></a>
-                
-                <a href="{% url 'error' %}" style="width: 50%;"><button style="background-color: red;width: 98%;height: -webkit-fill-available;"></button></a>
-            
+                <a href="https://www.youtube.com/embed/qUEM5m2fv-s" style="width: 50%;"><button
+                        style="background-color: greenyellow;width: 98%;height: -webkit-fill-available;"></button></a>
+
+                <a href="{% url 'error' %}" style="width: 50%;"><button
+                        style="background-color: red;width: 98%;height: -webkit-fill-available;"></button></a>
+
             </div>
         </div>
     </div>
