@@ -24,7 +24,7 @@ def register(request):
             user = form.save(commit=False)
             user.save()
             login(request, user)
-            return redirect('login/')
+            return redirect('login')
     else:
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
